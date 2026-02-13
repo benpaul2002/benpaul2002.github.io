@@ -1,7 +1,6 @@
 (() => {
   const root = document.documentElement;
   const themeToggle = document.getElementById('theme-toggle');
-  const YEAR_EL = document.getElementById('year');
 
   const getSystemTheme = () => (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   const getStoredTheme = () => {
@@ -57,9 +56,6 @@
   } else {
     revealSections.forEach((el) => el.classList.add('revealed'));
   }
-
-  // Dynamic year
-  if (YEAR_EL) YEAR_EL.textContent = new Date().getFullYear();
 })();
 
 
