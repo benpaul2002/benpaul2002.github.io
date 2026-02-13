@@ -1,222 +1,326 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ben Paul Varghese</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ben — Portfolio</title>
+    <meta name="description" content="Minimalist portfolio of Ben — projects, experience, and contact.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="preload" href="./styles.css" as="style">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">About Me</a></li>
-							<li><a href="#two">Resume</a></li>
-							<li><a href="#three">Projects</a></li>
-							<li><a href="#four">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#" class="brand" aria-label="Homepage">
+          <span class="brand-mark" aria-hidden="true">BP</span>
+          <span class="brand-text">Ben</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+    </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <main id="main" class="site-main">
+      <section class="section hero section-reveal" aria-label="Intro">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <p class="eyebrow">Hello, I'm</p>
+              <h1 class="headline">Ben</h1>
+              <p class="subhead">Graduate Researcher & Software Engineer specializing in AI, full-stack development, and systems programming.</p>
+              <div class="actions">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn" href="#contact">Contact Me</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img src="1.jpeg" alt="Ben" loading="eager">
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<img src="images/profile.jpg" id="profile-img">
-							<h1>Hello There!</h1>
-							<p>I am Ben Paul Varghese, a final year CSE student at International Institute of Information Technology, Hyderabad.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+      <section id="about" class="section section-reveal">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            I'm a Computer Science graduate student at Stony Brook University, researching Small Language Models and context-efficient reasoning strategies. 
+            My interests lie at the intersection of <strong>machine learning</strong> and <strong>full-stack engineering</strong>—I enjoy building AI-powered applications that solve real-world problems, from RAG systems to intelligent financial tools.
+          </p>
+          <p>
+            On the ML side, I work with language models, fine-tuning transformers, and designing efficient reasoning frameworks. In full-stack development, I build scalable web applications using modern frameworks like Next.js, TypeScript, and cloud infrastructure.
+          </p>
+          <ul class="chips" aria-label="Skills">
+            <li>Python</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>FastAPI</li>
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>PyTorch</li>
+            <li>C++</li>
+          </ul>
+        </div>
+      </section>
 
-					<hr>
+      <section id="projects" class="section section-reveal">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="grid">
+            <article class="card">
+              <div class="card-head">
+                <h3>TrackMyMoney</h3>
+                <a href="https://github.com/benpaul2002/TrackMyMoney" class="card-github" target="_blank" rel="noopener" aria-label="View TrackMyMoney on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>AI-powered budget tracker with PDF/CSV parsing and automatic categorization. Reduced dashboard loading time by 40% through independent widget loading and async processing with Celery.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>Next.js</li>
+                  <li>AI</li>
+                  <li>FastAPI</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>DMRAG</h3>
+                <a href="https://github.com/benpaul2002/DMRAG" class="card-github" target="_blank" rel="noopener" aria-label="View DMRAG on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>Retrieval-Augmented Generation system that automates the Dungeon Master role in D&D. Features hybrid retrieval (BM25 + semantic similarity) and fine-tuned transformers.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>RAG</li>
+                  <li>NLP</li>
+                  <li>PyTorch</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>99 - Multiplayer Card Game</h3>
+                <a href="https://github.com/benpaul2002/99" class="card-github" target="_blank" rel="noopener" aria-label="View 99 on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>Real-time multiplayer game with turn-based state management. Features CI/CD pipeline with GitHub Actions, multi-container deployment on AWS EC2, and Redis for low-latency synchronization.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>WebSockets</li>
+                  <li>Redis</li>
+                  <li>AWS</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>xv6 OS Extensions</h3>
+                <a href="https://github.com/benpaul2002/xv6_OS" class="card-github" target="_blank" rel="noopener" aria-label="View xv6 OS Extensions on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>Extended xv6 OS with custom system calls for process tracing and dynamic priority management. Implemented FCFS and Priority-Based Scheduling algorithms.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>C</li>
+                  <li>OS</li>
+                  <li>Systems</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>Adaptive Difficulty-Driven Router</h3>
+                <a href="https://github.com/benpaul2002/Adaptive_Difficulty_Driven_Router" class="card-github" target="_blank" rel="noopener" aria-label="View Adaptive Difficulty-Driven Router on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>Designed an adaptive routing system using Random Forest stacked with XGBoost that selects between Phi2 (lightweight, 41% accuracy) and WizardMath (powerful, 88% accuracy) for GSM8K math problems. Optimized efficiency by routing only 63% of problems to the expensive model while achieving 74.2% overall accuracy.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>ML</li>
+                  <li>XGBoost</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>RL Snake</h3>
+              </div>
+              <p>Implemented a Deep Q Network (DQN) reinforcement learning agent for Snake game that achieved scores of 100+, 400% higher than common implementations. Developed multiple exploration strategies with variable reward systems and collision detection mechanisms, experimenting with state representations and reward engineering techniques.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>DQN</li>
+                  <li>RL</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>Unsupervised Domain Adaptation</h3>
+                <a href="https://github.com/benpaul2002" class="card-github" target="_blank" rel="noopener" aria-label="View Unsupervised Domain Adaptation on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>Engineered a Domain-Adversarial Neural Network (DANN) to mitigate domain shift, utilizing a Gradient Reversal Layer (GRL) to force feature alignment between labeled source and unlabeled target datasets.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>Deep Learning</li>
+                  <li>DANN</li>
+                  <li>PyTorch</li>
+                </ul>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <h3>Bitcoin Simulator</h3>
+                <a href="https://github.com/benpaul2002/BITCOIN_DSA_MiniProject" class="card-github" target="_blank" rel="noopener" aria-label="View Bitcoin Simulator on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+              <p>Designed a Bitcoin simulator in C, implementing a blockchain from scratch using linked lists to chain transaction blocks. Integrated hash tables and dynamic arrays for efficient user data management, balance tracking, and transaction histories. Developed attack simulation and validation mechanisms to ensure chain integrity.</p>
+              <div class="card-footer">
+                <ul class="tags">
+                  <li>C</li>
+                  <li>Blockchain</li>
+                  <li>Data Structures</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-				<!-- One -->
+      <section id="experience" class="section section-reveal">
+        <div class="container">
+          <h2>Experience</h2>
+          <ul class="timeline">
+            <li>
+              <div class="time">Aug 2025 — Present</div>
+              <div class="item">
+                <h3>Graduate Researcher</h3>
+                <p class="company">LUNR Lab @ Stony Brook University</p>
+                <p>Investigating context-efficient reasoning strategies for Small Language Models (7-14B) on the AppWorld benchmark. Implemented the TAOS framework to replace full-history retention with iterative state summarization.</p>
+              </div>
+            </li>
+            <li>
+              <div class="time">Aug 2023 — Dec 2023</div>
+              <div class="item">
+                <h3>Undergraduate Researcher</h3>
+                <p class="company">SERC Lab @ IIIT-H, Hyderabad, India</p>
+                <p>Worked with Prof. Karthik Vaidhyanathan to build a multi-objective reinforcement learning framework to autonomously manage web server scalability. The system dynamically adjusts server resources in real-time to minimize response time and operational costs while maximizing user experience. Implemented using Q Learning and Proximal Policy Optimization (PPO).</p>
+              </div>
+            </li>
+            <li>
+              <div class="time">May 2023 — Aug 2023</div>
+              <div class="item">
+                <h3>Software Engineering Intern</h3>
+                <p class="company">NeoBase, Dubai, UAE</p>
+                <p>Translated Figma prototypes into responsive Next.js and Tailwind CSS interfaces for Web3 client projects. Maintained production-grade code quality with modular, type-safe TypeScript components.</p>
+              </div>
+            </li>
+            <li>
+              <div class="time">Nov 2022 — May 2023</div>
+              <div class="item">
+                <h3>Software Engineering Intern</h3>
+                <p class="company">Inclusive Growth Chain, Hyderabad, India</p>
+                <p>Architected the company's official landing page and revamped legacy React.js codebase for a comprehensive portal serving farmers in rural India. Integrated 25+ APIs for loan processing and crop advisories.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-					<section id="one" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>About Me</h2>
-							<p>I developed an interest in Computer Science in middle school, and since then, have taken multiple courses (either from school or online) to learn more about the subject. These are some of the languages, APIs, and libraries I have experience in, and have used for all the projects and similar work I have done.</p>
-							<ul>
-								<li>C</li>
-								<li>C++</li>
-								<li>HTML, CSS, JavaScript</li>
-								<li>MERN stack</li>
-								<li>OpenGL, WebGL</li>
-								<li>ThreeJS</li>
-								<li>Python</li>
-								<li>Bash Scripting</li>
-								<li>SQL</li>
-							</ul>
-						</div>
-					</section>
+      <section id="education" class="section section-reveal">
+        <div class="container">
+          <h2>Education</h2>
+          <ul class="timeline">
+            <li>
+              <div class="time">Aug 2024 — May 2026</div>
+              <div class="item">
+                <h3>Master of Science in Computer Science</h3>
+                <p class="company">Stony Brook University, New York</p>
+              </div>
+            </li>
+            <li>
+              <div class="time">Sep 2020 — May 2024</div>
+              <div class="item">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <p class="company">IIIT-H, Hyderabad, India</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-					<hr>
+      <section id="contact" class="section section-reveal">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            I’m open to collaborations and new opportunities.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:benpaul2002@gmail.com">Email Me</a>
+            <div class="socials" aria-label="Social links">
+              <a class="icon-link" href="https://github.com/benpaul2002" target="_blank" rel="noopener">GitHub</a>
+              <a class="icon-link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>Resume</h2>
-							<ul class="actions">
-								<li><a href="assets/Resume.pdf" class="button">Click here to see my resume</a></li>
-							</ul>
-						</div>
-					</section>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ben. All rights reserved.</p>
+      </div>
+    </footer>
 
-					<hr>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Projects</h2>
-							<div class="features">
-								<section>
-									<h3>Shell</h3>
-									<p>Created a Linux shell from scratch using C as part of the Operating Systems & Networks course at IIIT-H. Implemented most common commands like cd, ls, pwd, echo, etc., while also handling support for foreground and background processes, including signals and interrupts.</p>
-								</section>
-								<section>
-									<h3>xv6 OS</h3>
-									Tweaked the xv6 Operating System as part of the Operating Systems & Networks course at IIIT-H. Added two new system calls - strace and set_priority. <br>
-									<ul style="margin-bottom: 0;">
-										<li>strace traces the system calls made by a command.</li>
-										<li>set_priority changes the priority level of a process to the value entered by the user.</li>
-									</ul>
-									Also implemented two new schedulers (FCFS and PBS), in addition to the default round-robin scheduler.
-									<ul style="margin-bottom: 0;">
-										<li>FCFS (First Come First Served) - The process which comes first is run first.</li>
-										<li>PBS (Priority Based Scheduler) - The process with the highest priority is run first.</li>
-									</ul>
-								</section>
-								<section>
-									<h3>Nautica</h3>
-									<p>Created a 3D game using WebGL and ThreeJS as part of the Computer Graphics course at IIIT-H. Game involves moving across the ocean as a ship, while collecting treasure and destroying enemy ships. Destroying enemy ships causes a greater number of enemies to spawn. The game lasts as long as the user has health remaining.</p>
-								</section>
-								<section>
-									<h3>Canteen Portal Website</h3>
-									Made a canteen portal website as part of the Design and Analysis of Software Systems course at IIIT-H. The website has the following features -
-									<ul style="margin-bottom: 0;">
-										<li>Create/Edit profile for both buyer and vendor</li>
-										<li>Login/Registration</li>
-										<li>Vendors can add food items to their dashboard</li>
-										<li>Buyers can see food items available from every vendor</li>
-										<li>Buyers can search (fuzzy search) and filter according to their wish</li>
-										<li>Buyers can update their wallet balance</li>
-									</ul>
-									Also packaged and deployed the website using Docker.
-								</section>
-								<section>
-									<h3>Bitcoin Simulator</h3>
-									Designed a bitcoin simulator as part of the Data Structures & Algorithms course at IIIT-H (group project of 5 people). The simulator has support for a large number of users and transactions. Each transaction is stored in a block structure and the entire program will have multiple such blocks - forming a blockchain. Each block also has a hash value for verification and security purposes. The simulator has several functions, some of which are - <br>
-									<ul style="margin-bottom: 0;">
-										<li>Adding users</li>
-										<li>Conducting a transaction</li>
-										<li>Hash function, to generate a hash value for each block</li>
-									</ul>
-									I was heavily involved in writing the code for the simulator, and also completely handled the design of test cases.
-								</section>
-								<section>
-									<h3>Algorithms Website</h3>
-									<p>Created a website as a guide for beginners to algorithms as part of the Algorithms Analysis & Design course at IIIT-H. The website had a simple UI, along with easy to understand explanations of several famous algorithms under Divide & Conquer, Greedy, and Dynamic Programming.</p>
-								</section>
-								<section>
-									<h3>Parliament Database</h3>
-									<p>Implemented a database based on the Indian Parliament System using MySQL and Python as part of the Data and Applications course at IIIT-H (group project of 3 people). The database stored some of the members of the lower and upper houses of the country, as well as the states councils. Also designed a Python program to query the database for selection and updation. I was mainly involved with the MySQL part of the project, which involved designing the database itself and adding the data.</p>
-								</section>
-								<section>
-									<h3>Card Game</h3>
-									<p>Simulated a card game called 99 using C++ as a personal project during my free time. In this game, the user plays against the computer, and the one who loses their cards the fastest is the winner. I created the code such that the computer always makes the best possible choice at every step.</p>
-								</section>
-							</div>
-						</div>
-					</section>
-
-					<hr>
-
-				<!-- Four -->
-					<section id="four" class="wrapper style2 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<!-- <p>I am currently actively exploring opportunities for a software development internship for the summer of 2022. If you wish to contact me for the same, or for any other reason, my inbox is always open.</p> -->
-							<div class="split style1">
-								<section>
-									<form method="post" action="https://formspree.io/f/moqrqgor">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>IIIT Hyderabad<br />
-											Gachibowli, Telangana<br />
-											India</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="mailto: ben.varghese@students.iiit.ac.in">ben.varghese@students.iiit.ac.in</a>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/benpaul2002" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <noscript>
+      <style>
+        .section-reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+  </body>
 </html>
+
+
+
+
