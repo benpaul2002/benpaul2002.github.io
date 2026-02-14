@@ -3,21 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DMRAG — Ben</title>
+    <title>DMRAG - Ben</title>
     <meta name="description" content="Dungeon Master Retrieval-Augmented Generation system for D&D gameplay automation.">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <link rel="preload" href="../styles.css" as="style">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+      .project-detail .section { padding-top: clamp(1.25rem, 3vw, 2rem); padding-bottom: clamp(1.25rem, 3vw, 2rem); }
+      .project-detail .section.hero { padding-top: clamp(3rem, 8vw, 7rem); }
+    </style>
     <script defer src="../script.js"></script>
   </head>
   <body>
     <header class="site-header" role="banner">
       <div class="container header-inner">
         <a href="../index.html" class="brand" aria-label="Homepage">
-          <span class="brand-mark" aria-hidden="true">BP</span>
-          <span class="brand-text">Ben</span>
+          <span class="brand-mark" aria-hidden="true">B</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav-list">
@@ -34,7 +37,7 @@
       </div>
     </header>
 
-    <main id="main" class="site-main">
+    <main id="main" class="site-main project-detail">
       <section class="section hero section-reveal" aria-label="Project">
         <div class="container">
           <a href="../index.html#projects" class="link" style="margin-bottom: 1rem; display: inline-block;">← Back to Projects</a>
@@ -50,27 +53,43 @@
         <div class="container">
           <h2>Overview</h2>
           <p>
-            DMRAG is a Retrieval-Augmented Generation (RAG) system designed to automate the Dungeon Master role in Dungeons & Dragons. 
-            The system delivers immersive, context-aware narratives for players by combining fine-tuned language models with hybrid retrieval mechanisms.
+            Tabletop games like D&D rely on a human Dungeon Master to run the story and rules - solo or small groups often lack that. 
+            DMRAG automates the DM role: it produces immersive, context-aware adventure narration and handles mechanics (dice, hit points, etc.) 
+            in a single modular pipeline. The main technical challenge we addressed was <strong>narrative coherence over multi-turn dialogue</strong> 
+            without sacrificing rule fidelity.
           </p>
           <p>
-            The project demonstrates advanced NLP techniques, including fine-tuning transformers on domain-specific data, 
-            implementing hybrid retrieval strategies, and using OpenAI function calling for game state management.
+            The system combines dense semantic search, a fine-tuned generative model, and symbolic validation: each response is grounded in 
+            retrieved rule and lore passages, then checked for mechanical correctness. We used three data sources - SRDv5.2 rules, four campaign 
+            modules, and the CRD3 Critical Role dialogue dataset (~87k training / 22k validation pairs, ~5M tokens) - and a five-stage pipeline 
+            from ingestion and chunking through embedding, hybrid retrieval, generation, and game-state parsing.
           </p>
         </div>
       </section>
 
       <section class="section section-reveal">
         <div class="container">
-          <h2>Features</h2>
+          <h2>Key contributions</h2>
           <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Fine-tuned sentence transformer for semantic search</li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">GPT2 model trained on D&D-specific data</li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Hybrid retrieval combining BM25 (keyword-based) and semantic similarity</li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">OpenAI function calling for dynamic game state management</li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Modular pipeline architecture for easy extension</li>
-            <li style="padding: 0.5rem 0;">Context-aware narrative generation based on game history</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Fine-tuned sentence transformer (BAAI/bge-base-en-v1.5) with Multiple Negatives Ranking Loss for D&D retrieval</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">GPT2-medium (355M) fine-tuned on chunked SRD + campaigns for domain style, then used for response generation</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Hybrid retrieval: BM25 narrows to top 1k chunks, then FAISS + cosine similarity for top-50; combined scoring for final top-k</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">OpenAI function calling (GPT-4.1-nano) for parsing LLM output and user input to track game state (HP, dice, etc.)</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Metadata filtering so users can choose a storyline (e.g. Curse of Strahd); retrieval stays lore-focused and efficient</li>
+            <li style="padding: 0.5rem 0;">Neural-symbolic pipeline: retrieval-grounded generation plus symbolic rule enforcement</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Results</h2>
+          <p>
+            We evaluated retrieval grounding, language quality, and rule compliance. On representative queries, the retriever achieved 
+            <strong>100% recall at top-3</strong> (ground-truth chunk always in top-3) with semantic similarity scores &gt; 0.5 for contextually 
+            relevant results. Perplexity on user-style inputs fell in the expected range for a RAG system (~14), indicating the model 
+            adapted well to D&D-style dialogue. The pipeline delivers rule-grounded, context-aware DM responses and game-state updates in one system.
+          </p>
         </div>
       </section>
 
@@ -81,8 +100,10 @@
             <li>Python</li>
             <li>PyTorch</li>
             <li>Transformers</li>
+            <li>GPT2-medium</li>
             <li>OpenAI API</li>
-            <li>Sentence Transformers</li>
+            <li>Sentence Transformers (BGE)</li>
+            <li>FAISS</li>
             <li>BM25</li>
             <li>RAG</li>
             <li>NLP</li>
@@ -90,19 +111,7 @@
         </div>
       </section>
 
-      <section class="section section-reveal">
-        <div class="container">
-          <h2>Visuals</h2>
-          <p style="color: var(--muted);">Screenshots and demos coming soon.</p>
-        </div>
-      </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Ben. All rights reserved.</p>
-      </div>
-    </footer>
   </body>
 </html>
 

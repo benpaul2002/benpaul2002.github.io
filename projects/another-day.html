@@ -10,14 +10,17 @@
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <link rel="preload" href="../styles.css" as="style">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+      .project-detail .section { padding-top: clamp(1.25rem, 3vw, 2rem); padding-bottom: clamp(1.25rem, 3vw, 2rem); }
+      .project-detail .section.hero { padding-top: clamp(3rem, 8vw, 7rem); }
+    </style>
     <script defer src="../script.js"></script>
   </head>
   <body>
     <header class="site-header" role="banner">
       <div class="container header-inner">
         <a href="../index.html" class="brand" aria-label="Homepage">
-          <span class="brand-mark" aria-hidden="true">BP</span>
-          <span class="brand-text">Ben</span>
+          <span class="brand-mark" aria-hidden="true">B</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav-list">
@@ -34,14 +37,19 @@
       </div>
     </header>
 
-    <main id="main" class="site-main">
+    <main id="main" class="site-main project-detail">
       <section class="section hero section-reveal" aria-label="Project">
         <div class="container">
           <a href="../index.html#projects" class="link" style="margin-bottom: 1rem; display: inline-block;">← Back to Projects</a>
           <h1>Another Day</h1>
           <p class="subhead">Retro 3D survival horror game built in Unity with a team of 3. AI-driven enemies, full storyline, cutscenes, and intense combat with custom-animated weapons.</p>
-          <div class="actions" style="margin-top: 1.5rem;">
-            <a class="btn primary" href="https://www.youtube.com/watch?v=slRQnyomeMM" target="_blank" rel="noopener">Watch on YouTube</a>
+          <div class="project-media" style="margin-top: 2rem;">
+            <figure>
+              <div class="video-wrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/slRQnyomeMM?si=GEHlMqkxs-FaNFkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <figcaption>Gameplay trailer — Another Day. <span class="yt-fallback">If the video doesn't load (e.g. ad blocker), <a href="https://www.youtube.com/watch?v=slRQnyomeMM" target="_blank" rel="noopener">watch on YouTube</a>.</span></figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -83,34 +91,6 @@
         </div>
       </section>
 
-      <section class="section section-reveal">
-        <div class="container">
-          <h2>Visuals</h2>
-          <div class="project-media">
-            <figure>
-              <div class="video-wrap">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/slRQnyomeMM?si=GEHlMqkxs-FaNFkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
-              <figcaption>Gameplay trailer — Another Day. <span class="yt-fallback">If the video doesn’t load (e.g. ad blocker), <a href="https://www.youtube.com/watch?v=slRQnyomeMM" target="_blank" rel="noopener">watch on YouTube</a>.</span></figcaption>
-            </figure>
-            <!-- Optional: add screenshots in a gallery. Put images in projects/assets/your-project/ -->
-            <!--
-            <div class="project-gallery">
-              <figure>
-                <img src="assets/another-day/screenshot1.png" alt="In-game screenshot" loading="lazy">
-                <figcaption>Caption for screenshot</figcaption>
-              </figure>
-            </div>
-            -->
-          </div>
-        </div>
-      </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Ben. All rights reserved.</p>
-      </div>
-    </footer>
   </body>
 </html>
