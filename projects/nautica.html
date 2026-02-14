@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nautica — Ben</title>
+    <meta name="description" content="3D web game built with Three.js. Sail treacherous waters, collect treasures, and battle enemy ships.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand" aria-label="Homepage">
+          <span class="brand-mark" aria-hidden="true">BP</span>
+          <span class="brand-text">Ben</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section class="section hero section-reveal" aria-label="Project">
+        <div class="container">
+          <a href="../index.html#projects" class="link" style="margin-bottom: 1rem; display: inline-block;">← Back to Projects</a>
+          <h1>Nautica</h1>
+          <p class="subhead">A 3D game built with Three.js—travel treacherous waters to collect treasures and battle enemy ships. Includes a custom game trailer.</p>
+          <div class="actions" style="margin-top: 1.5rem;">
+            <a class="btn primary" href="https://github.com/benpaul2002/Nautica" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=pCUs90uUzjM" target="_blank" rel="noopener">Watch Trailer</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Overview</h2>
+          <p>
+            Nautica is a 3D game developed with Three.js, along with its trailer. The game offers players an immersive experience 
+            of travelling treacherous waters to collect treasures and battle against enemy ships. The project demonstrates 
+            full-stack 3D web development and game design in the browser.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Features</h2>
+          <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Immersive 3D naval exploration and combat</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Treasure collection across treacherous waters</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Enemy ship battles</li>
+            <li style="padding: 0.5rem 0;">Custom game trailer produced for the project</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Tech Stack</h2>
+          <ul class="chips" aria-label="Technologies">
+            <li>Three.js</li>
+            <li>JavaScript</li>
+            <li>WebGL</li>
+            <li>3D</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Visuals</h2>
+          <div class="project-media">
+            <figure>
+              <div class="video-wrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pCUs90uUzjM?si=HTxbFjMoKd4UOU8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <figcaption>Nautica — game trailer. <span class="yt-fallback">If the video doesn’t load (e.g. ad blocker), <a href="https://www.youtube.com/watch?v=pCUs90uUzjM" target="_blank" rel="noopener">watch on YouTube</a>.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ben. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

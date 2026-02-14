@@ -85,58 +85,122 @@
         <div class="container">
           <h2>Projects</h2>
           <div class="grid">
-            <article class="card">
-              <div class="card-head">
-                <h3>TrackMyMoney</h3>
-                <a href="https://github.com/benpaul2002/TrackMyMoney" class="card-github" target="_blank" rel="noopener" aria-label="View TrackMyMoney on GitHub">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                </a>
+            <article class="card" data-project-link="projects/trackmymoney.html">
+              <div class="card-content">
+                <div class="card-head">
+                  <h3>TrackMyMoney</h3>
+                  <a href="https://github.com/benpaul2002/TrackMyMoney" class="card-github" target="_blank" rel="noopener" aria-label="View TrackMyMoney on GitHub" onclick="event.stopPropagation()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+                <p>AI-powered budget tracker with PDF/CSV parsing and automatic categorization. Reduced dashboard loading time by 40% through independent widget loading and async processing with Celery.</p>
+                <div class="card-footer">
+                  <ul class="tags">
+                    <li>Next.js</li>
+                    <li>AI</li>
+                    <li>FastAPI</li>
+                  </ul>
+                </div>
               </div>
-              <p>AI-powered budget tracker with PDF/CSV parsing and automatic categorization. Reduced dashboard loading time by 40% through independent widget loading and async processing with Celery.</p>
-              <div class="card-footer">
-                <ul class="tags">
-                  <li>Next.js</li>
-                  <li>AI</li>
-                  <li>FastAPI</li>
-                </ul>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <h3>DMRAG</h3>
-                <a href="https://github.com/benpaul2002/DMRAG" class="card-github" target="_blank" rel="noopener" aria-label="View DMRAG on GitHub">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                </a>
-              </div>
-              <p>Retrieval-Augmented Generation system that automates the Dungeon Master role in D&D. Features hybrid retrieval (BM25 + semantic similarity) and fine-tuned transformers.</p>
-              <div class="card-footer">
-                <ul class="tags">
-                  <li>RAG</li>
-                  <li>NLP</li>
-                  <li>PyTorch</li>
-                </ul>
+              <div class="card-overlay">
+                <a href="projects/trackmymoney.html" class="btn primary" onclick="event.stopPropagation()">View Project</a>
               </div>
             </article>
-            <article class="card">
-              <div class="card-head">
-                <h3>99 - Multiplayer Card Game</h3>
-                <a href="https://github.com/benpaul2002/99" class="card-github" target="_blank" rel="noopener" aria-label="View 99 on GitHub">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                </a>
+            <article class="card" data-project-link="projects/dmrag.html">
+              <div class="card-content">
+                <div class="card-head">
+                  <h3>DMRAG</h3>
+                  <a href="https://github.com/benpaul2002/DMRAG" class="card-github" target="_blank" rel="noopener" aria-label="View DMRAG on GitHub" onclick="event.stopPropagation()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+                <p>Retrieval-Augmented Generation system that automates the Dungeon Master role in D&D. Features hybrid retrieval (BM25 + semantic similarity) and fine-tuned transformers.</p>
+                <div class="card-footer">
+                  <ul class="tags">
+                    <li>RAG</li>
+                    <li>NLP</li>
+                    <li>PyTorch</li>
+                  </ul>
+                </div>
               </div>
-              <p>Real-time multiplayer game with turn-based state management. Features CI/CD pipeline with GitHub Actions, multi-container deployment on AWS EC2, and Redis for low-latency synchronization.</p>
-              <div class="card-footer">
-                <ul class="tags">
-                  <li>WebSockets</li>
-                  <li>Redis</li>
-                  <li>AWS</li>
-                </ul>
+              <div class="card-overlay">
+                <a href="projects/dmrag.html" class="btn primary" onclick="event.stopPropagation()">View Project</a>
+              </div>
+            </article>
+            <article class="card" data-project-link="projects/99.html">
+              <div class="card-content">
+                <div class="card-head">
+                  <h3>99 - Multiplayer Card Game</h3>
+                  <a href="https://github.com/benpaul2002/99" class="card-github" target="_blank" rel="noopener" aria-label="View 99 on GitHub" onclick="event.stopPropagation()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+                <p>Real-time multiplayer game with turn-based state management. Features CI/CD pipeline with GitHub Actions, multi-container deployment on AWS EC2, and Redis for low-latency synchronization.</p>
+                <div class="card-footer">
+                  <ul class="tags">
+                    <li>WebSockets</li>
+                    <li>Redis</li>
+                    <li>AWS</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <a href="projects/99.html" class="btn primary" onclick="event.stopPropagation()">View Project</a>
+              </div>
+            </article>
+            <article class="card" data-project-link="projects/another-day.html">
+              <div class="card-content">
+                <div class="card-head">
+                  <h3>Another Day</h3>
+                  <a href="https://www.youtube.com/watch?v=slRQnyomeMM" class="card-github" target="_blank" rel="noopener" aria-label="Watch Another Day on YouTube" title="YouTube" onclick="event.stopPropagation()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </a>
+                </div>
+                <p>Designed a retro 3D survival horror game in Unity as part of a 3-person team. Implemented AI enemy navigation with the NavMesh system for challenging encounters. Built immersive gameplay with a full storyline, multiple cutscenes, a dialogue system, and intense combat mechanics with custom-animated weapons.</p>
+                <div class="card-footer">
+                  <ul class="tags">
+                    <li>Unity</li>
+                    <li>C#</li>
+                    <li>Game Dev</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <a href="projects/another-day.html" class="btn primary" onclick="event.stopPropagation()">View Project</a>
+              </div>
+            </article>
+            <article class="card" data-project-link="projects/nautica.html">
+              <div class="card-content">
+                <div class="card-head">
+                  <h3>Nautica</h3>
+                  <span class="card-links">
+                    <a href="https://github.com/benpaul2002/Nautica" class="card-github" target="_blank" rel="noopener" aria-label="View Nautica on GitHub" onclick="event.stopPropagation()">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=pCUs90uUzjM" class="card-github" target="_blank" rel="noopener" aria-label="Watch Nautica on YouTube" title="YouTube" onclick="event.stopPropagation()">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                  </span>
+                </div>
+                <p>Developed a 3D game and its trailer using Three.js. Players travel treacherous waters to collect treasures and battle enemy ships in an immersive experience.</p>
+                <div class="card-footer">
+                  <ul class="tags">
+                    <li>Three.js</li>
+                    <li>3D</li>
+                    <li>Web</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <a href="projects/nautica.html" class="btn primary" onclick="event.stopPropagation()">View Project</a>
               </div>
             </article>
             <article class="card">

@@ -56,6 +56,26 @@
   } else {
     revealSections.forEach((el) => el.classList.add('revealed'));
   }
+
+  // Dynamic year
+  const YEAR_EL = document.getElementById('year');
+  if (YEAR_EL) YEAR_EL.textContent = new Date().getFullYear();
+
+  // Make project cards clickable
+  const projectCards = document.querySelectorAll('.card[data-project-link]');
+  projectCards.forEach((card) => {
+    const projectLink = card.getAttribute('data-project-link');
+    if (projectLink) {
+      card.addEventListener('click', (e) => {
+        // Don't navigate if clicking on a link or button
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          return;
+        }
+        window.location.href = projectLink;
+      });
+    }
+  });
+
 })();
 
 

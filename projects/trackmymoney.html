@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrackMyMoney — Ben</title>
+    <meta name="description" content="AI-powered budget tracker with PDF/CSV parsing and automatic categorization.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand" aria-label="Homepage">
+          <span class="brand-mark" aria-hidden="true">BP</span>
+          <span class="brand-text">Ben</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section class="section hero section-reveal" aria-label="Project">
+        <div class="container">
+          <a href="../index.html#projects" class="link" style="margin-bottom: 1rem; display: inline-block;">← Back to Projects</a>
+          <h1>TrackMyMoney</h1>
+          <p class="subhead">AI-powered budget tracker with intelligent transaction parsing, automatic categorization, and financial insights.</p>
+          <div class="actions" style="margin-top: 1.5rem;">
+            <a class="btn primary" href="https://github.com/benpaul2002/TrackMyMoney" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Overview</h2>
+          <p>
+            TrackMyMoney is an AI-powered personal finance application that simplifies budget tracking through intelligent automation. 
+            The system can parse PDF and CSV transaction files, automatically categorize expenses, and provide financial insights through 
+            an intuitive chat interface powered by OpenAI's agent tool calling.
+          </p>
+          <p>
+            The project showcases full-stack development with performance optimization, achieving a 40% reduction in dashboard loading time 
+            through independent widget loading and asynchronous processing.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Features</h2>
+          <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">PDF and CSV transaction parsing with automatic extraction</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">AI-powered automatic transaction categorization</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Financial agent using OpenAI agent tool calling for intelligent queries</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Streaming chat messages for real-time interaction</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Asynchronous processing with Celery for parsing and categorization</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Independent widget loading reducing dashboard load time by 40%</li>
+            <li style="padding: 0.5rem 0;">Interactive dashboard with financial insights and visualizations</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Tech Stack</h2>
+          <ul class="chips" aria-label="Technologies">
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>FastAPI</li>
+            <li>Supabase</li>
+            <li>OpenAI API</li>
+            <li>Celery</li>
+            <li>Python</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Visuals</h2>
+          <div class="project-media">
+            <!-- Option 1: Embedded YouTube (replace VIDEO_ID with your video ID from the URL) -->
+            <!--
+            <figure>
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="TrackMyMoney demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <figcaption>App demo</figcaption>
+            </figure>
+            -->
+            <!-- Option 2: Self-hosted video (add .mp4 to projects/assets/trackmymoney/) -->
+            <!--
+            <figure>
+              <div class="video-wrap">
+                <video src="assets/trackmymoney/demo.mp4" controls playsinline></video>
+              </div>
+              <figcaption>Short demo</figcaption>
+            </figure>
+            -->
+            <!-- Option 3: Image gallery (add .png/.jpg to projects/assets/trackmymoney/) -->
+            <!--
+            <div class="project-gallery">
+              <figure>
+                <img src="assets/trackmymoney/dashboard.png" alt="Dashboard view" loading="lazy">
+                <figcaption>Dashboard</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/trackmymoney/chat.png" alt="Chat interface" loading="lazy">
+                <figcaption>AI chat</figcaption>
+              </figure>
+            </div>
+            -->
+            <p style="color: var(--muted);">Screenshots and demos coming soon. Add a video or images above using the commented examples.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ben. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

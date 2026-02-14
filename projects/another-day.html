@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Another Day — Ben</title>
+    <meta name="description" content="Retro 3D survival horror game built in Unity with NavMesh AI, cutscenes, and custom combat.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="preload" href="../styles.css" as="style">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand" aria-label="Homepage">
+          <span class="brand-mark" aria-hidden="true">BP</span>
+          <span class="brand-text">Ben</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section class="section hero section-reveal" aria-label="Project">
+        <div class="container">
+          <a href="../index.html#projects" class="link" style="margin-bottom: 1rem; display: inline-block;">← Back to Projects</a>
+          <h1>Another Day</h1>
+          <p class="subhead">Retro 3D survival horror game built in Unity with a team of 3. AI-driven enemies, full storyline, cutscenes, and intense combat with custom-animated weapons.</p>
+          <div class="actions" style="margin-top: 1.5rem;">
+            <a class="btn primary" href="https://www.youtube.com/watch?v=slRQnyomeMM" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Overview</h2>
+          <p>
+            Another Day is a retro-style 3D survival horror game developed in Unity as part of a 3-person team. 
+            The game combines classic horror atmosphere with modern gameplay systems: AI enemies that navigate the environment 
+            using Unity's NavMesh, a full narrative with multiple cutscenes and a dialogue system, and combat mechanics 
+            featuring multiple weapons, each with custom animations.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Features</h2>
+          <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">AI enemy navigation using Unity's NavMesh system for challenging encounters</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Comprehensive storyline with multiple cutscenes</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Full dialogue system for narrative delivery</li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Intense combat mechanics with multiple weapons</li>
+            <li style="padding: 0.5rem 0;">Custom animations for each weapon</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Tech Stack</h2>
+          <ul class="chips" aria-label="Technologies">
+            <li>Unity</li>
+            <li>C#</li>
+            <li>NavMesh</li>
+            <li>3D Game Dev</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-reveal">
+        <div class="container">
+          <h2>Visuals</h2>
+          <div class="project-media">
+            <figure>
+              <div class="video-wrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/slRQnyomeMM?si=GEHlMqkxs-FaNFkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <figcaption>Gameplay trailer — Another Day. <span class="yt-fallback">If the video doesn’t load (e.g. ad blocker), <a href="https://www.youtube.com/watch?v=slRQnyomeMM" target="_blank" rel="noopener">watch on YouTube</a>.</span></figcaption>
+            </figure>
+            <!-- Optional: add screenshots in a gallery. Put images in projects/assets/your-project/ -->
+            <!--
+            <div class="project-gallery">
+              <figure>
+                <img src="assets/another-day/screenshot1.png" alt="In-game screenshot" loading="lazy">
+                <figcaption>Caption for screenshot</figcaption>
+              </figure>
+            </div>
+            -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ben. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
